@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="slene, Unknown" />
+
+<title>Community - beego: simple &amp; powerful Go app framework</title>
+
+<link rel="shortcut icon" href="/static/img/favicon.png" />
+
+
+<script>/* Beego Compress group `lib` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/bootstrap.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/bootstrap-theme.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/font-awesome.min.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/prettify.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/select2.css?ver=1409586500" />
+	<script>/* end */</script>
+<!--[if IE 7]>
+<script>/* Beego Compress group `ie7` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/font-awesome-ie7.min.css?ver=1409586500" />
+	<script>/* end */</script>
+<![endif]-->
+<script>/* Beego Compress group `app` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/base.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/markdown.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/main.css?ver=1409586500" />
+	<script>/* end */</script>
+
+<!--[if lt IE 9]>
+	<script>/* Beego Compress group `ie9` begin */</script>
+	<script type="text/javascript" src="/static_source/js/html5shiv.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/respond.min.js?ver=1409586500"></script>
+	<script>/* end */</script>
+<![endif]-->
+		
+	</head>
+	<body id="front">
+		<noscript>Please enable JavaScript in your browser!</noscript>
+		<div id="wrapper">
+			<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container" data-toggle="clingify">
+        <div class="row">
+            <div class="navbar-header">
+                
+                <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="hidden-xs logo" href="/">
+                    <img style="height:32px;width:102px;" src="/static/img/beego_purple.png">
+                </a>
+                <div class="visible-xs text-center">
+                    <a class="navbar-brand" href="/">
+                        Beego
+                    </a>
+                    
+                    <span class="nav-github">
+                        <span rel="show-github" data-user="astaxie" data-repo="beego"></span>
+                    </span>
+                    
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" role="navigation" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li ><a href="/">Home</a></li>
+                    <li ><a href="/quickstart">Getting started</a></li>
+                    <li class="active"><a href="/community">Community</a></li>
+                    <li ><a href="/docs/intro/">Documentation</a></li>
+                    <li ><a href="/video">Video</a></li>
+                    <li ><a href="/products">Products</a></li>
+                    <li ><a href="/blog">Blog</a></li>
+                </ul>
+                <div class="hidden-sm hidden-xs nav-lang pull-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-xs btn-default btn-md dropdown-toggle" data-toggle="dropdown">Language:English <i class="caret"></i></button>
+                        <ul class="dropdown-menu">
+                            
+                                <li><a href="javascript::" data-lang="zh-CN" class="lang-changed">简体中文</a></li>
+                            
+                                <li><a href="javascript::" data-lang="ru-RU" class="lang-changed">Russian</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden-sm hidden-xs nav-github pull-right">
+                    <span rel="show-github" data-user="astaxie" data-repo="beego"></span>
+                    <span rel="show-github" data-user="astaxie" data-repo="beego" data-type="fork"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+			<div id="main">
+				
+<div class="container main-container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box">
+				<div class="cell slim page-box markdown">
+					
+					<div class="page-header">
+					    <h1>About the community</h1>
+					    <p>
+					    	Join the developers who are helping to lead the beego revolution! Joining our community is a great way to interact with other talented developers and devops professionals, increase awareness of the work that you are doing, improve your skills, or give back.
+					    </p>
+			    	</div>
+
+				    <h2>Get in touch</h2>
+				    <p>
+				    	There are several ways to get in touch:
+				    </p>
+
+				    <ul id="chooser-blocks" class="option-chooser-blocks">
+				        <a target="_blank" href="https://groups.google.com/forum/#!forum/beego-framework"><li>Google groups<img class="img-responsive" src="/static/img/community/google-groups.png"> </li></a>
+
+				        <a target="_blank" href="http://github.com/astaxie/beego"><li>Github<img class="img-responsive" src="/static/img/community/github.png"> </li></a>
+
+				        <a target="_blank" href="http://stackoverflow.com/search?q=beego"><li>Stackoverflow<img class="img-responsive" src="/static/img/community/stackoverflow.png"> </li></a>
+
+				        <a target="_blank" href="https://twitter.com/search?q=%23beego"><li>Twitter<img class="img-responsive" src="/static/img/community/twitter.png"> </li></a>
+
+						<li>IRC: chat.freenode.net #beegoer</li></a>
+
+				    </ul>
+
+				    <span class="clearfix"></span>
+
+				    <h3>More options:</h3>
+				    <ul>
+				    	<li>Sina Weibo: <a target="_blank" href="http://weibo.com/1889019865">@asta谢</a></li>
+				    	<li>Beego developer QQ Group: 258969317(Be sure that you contributed before you ask to join)</li>
+				    </ul>
+
+				    <h2>Share</h2>
+				    <p>
+				    	Sharing what you have built with beego is a great way to help people understand the value of beego. If you have a great story to tell we'll be happy to help you spread the word.
+				    </p>
+				    <ul>
+					    <li>Tell your story at a company tech talk, tweet (#beego, @beego)  present at your local user group, or&nbsp;submit a
+					    talk proposal&nbsp;to a conference or event about how you are using beego.</li>
+					    <li>If you are using beego, in production, become a public reference.</li>
+					    <li>Write a tutorial.</li>
+				    </ul>
+
+				    <h2>Contribute</h2>
+				    <p>
+				    	An Open Source project like beego couldn’t exist without contributions from the developer community. Until now, there are over 35 contributors and nearly 410 forks on the project.
+				    </p>
+				    <ul>
+					    <li>Take a look at our <a target="_blank" href="https://github.com/astaxie/beego/issues?state=open">issues list</a> and consider submitting a patch</li>
+					    <li>Review our roadmap on <a target="_blank" href="https://github.com/astaxie/beego">GitHub</a> and provide feedback</li>
+					    <li>Consider contributing.</li>
+				    </ul>
+				    <p>
+				    	We run the <a href="/docs/intro/"><strong>documentation</strong></a> as an open source project. The sources are available from the main <a target="_blank" href="https://github.com/beego/beedoc">beedoc repository</a> on Github, and we encourage you to make improvements, whether big or small, make a pull request.
+				    </p>
+
+				    <h2>What people have already built using beego</h2>
+				    <p>
+				    	Beego is a powerful framework for many different use cases. Here are some great early use cases for beego, as described by members of our community.
+				    </p>
+				    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <meta name="GENERATOR" content="Blackfriday Markdown Processor v1.1" />
+  <meta charset="utf-8" />
+</head>
+<body>
+
+<table class="docker_use_cases_table table">
+    <thead>
+        <tr>
+            <td>Use Cases</td>
+            <td>Examples</td>
+            <td>Links</td>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr>
+            <td>Documentation server</td>
+            <td>Go Walker - a web server that generates Go projects API documentation with source code on the fly.</td>
+            <td><a target="_blank" href="http://gowalker.org">http://gowalker.org</a></td>
+        </tr>
+
+        <tr>
+            <td>API services</td>
+            <td>360 search API service for Youdao, tens of millions requests level.</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Bmob mobile cloud API service, more than 50 million requests every day.</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Weico 3 backend API service.</td>
+        </tr>
+
+        <tr>
+            <td>Blogs</td>
+            <td>Sudo China - multiple users blog system</td>
+            <td><a target="_blank" href="http://www.sudochina.com">http://sudochina.com</a></td>
+        </tr>
+
+        <tr>
+            <td>Communities</td>
+            <td>Very Hour - social network</td>
+            <td><a target="_blank" href="http://www.veryhour.com">http://veryhour.com</a></td>
+        </tr>
+
+        <tr>
+            <td>Enterprise websites</td>
+            <td>I Beautys</td>
+            <td><a target="_blank" href="http://www.ibeautys.com/">http://ibeautys.com/</a></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Interla</td>
+            <td><a target="_blank" href="http://interla.net">http://interla.net</a></td>
+        </tr>
+
+        <tr>
+            <td>Flipkart - Image Delivery</td>
+            <td>Web Server which resizes images and works as a fallback to CDN</td>
+            <td><a target="_blank" href="github.com/flipkart-incubator/lenna">Git Hub</a></td>
+        </tr>
+        
+        <tr>
+            <td>Singulerp - ERP</td>
+            <td>Subscription based Cloud ERP for Manufacturing Industry.</td>
+            <td><a target="_blank" href="https://singulerp.com">Singulerp.com</a></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+
+				    <a href="https://github.com/beego/beedoc/blob/master/en-US/usecases.md" class="pull-right btn btn-success" target="_blank">Add your use case</a>
+
+					
+
+					<span class="clearfix"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		    </div>
+		    <div class="wrapper-push"></div>
+		</div>
+		<footer id="footer">
+    <div class="container">
+        <div class="row footer-wrap">
+            <div class="col-md-12 desc">
+                <div class="pull-right">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-default btn-md dropdown-toggle" data-toggle="dropdown">Language:English <i class="caret"></i></button>
+                        <ul class="dropdown-menu">
+                            
+                                <li><a href="javascript::" data-lang="zh-CN" class="lang-changed">简体中文</a></li>
+                            
+                                <li><a href="javascript::" data-lang="ru-RU" class="lang-changed">Russian</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    
+                        <a class="btn btn-success" href="/donate"><i class="icon-dollar"></i> Donate Us</a>
+                    
+                </div>
+                
+                <p>
+                    <a href="/about"><strong>About</strong></a>
+                    |
+                    <a href="/team"><strong>Team</strong></a>
+                    |
+                    <a target="_blank" href="https://github.com/astaxie/beego" target="_blank"><strong><i class="icon-github-sign"></i> Github</strong></a>
+                    - 23ms.
+                </p>
+
+                <p>
+                    Copyright © 2012-2014 Beego Under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">apache 2.0 licence</a>. Logo designed by <a target="_blank" href="http://mdong.org">Tengfei</a>.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39123845-1', 'beego.me');
+  ga('send', 'pageview');
+
+</script>
+
+<script>/* Beego Compress group `lib` begin */</script>
+	<script type="text/javascript" src="/static_source/js/jquery.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.extend.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/bootstrap.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/lib.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/prettify.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jStorage.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.jpanelmenu.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jRespond.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.clingify.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/imagesloaded.pkgd.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/masonry.pkgd.min.js?ver=1409586500"></script>
+	<script>/* end */</script>
+<script>/* Beego Compress group `app` begin */</script>
+	<script type="text/javascript" src="/static_source/js/main.js?ver=1409586500"></script>
+	<script>/* end */</script>
+	</body>
+</html>
+
+
+

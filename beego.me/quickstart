@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="slene, Unknown" />
+
+<title>Getting started - beego: simple &amp; powerful Go app framework</title>
+
+<link rel="shortcut icon" href="/static/img/favicon.png" />
+
+
+<script>/* Beego Compress group `lib` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/bootstrap.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/bootstrap-theme.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/font-awesome.min.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/prettify.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/select2.css?ver=1409586500" />
+	<script>/* end */</script>
+<!--[if IE 7]>
+<script>/* Beego Compress group `ie7` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/font-awesome-ie7.min.css?ver=1409586500" />
+	<script>/* end */</script>
+<![endif]-->
+<script>/* Beego Compress group `app` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/base.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/markdown.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/main.css?ver=1409586500" />
+	<script>/* end */</script>
+
+<!--[if lt IE 9]>
+	<script>/* Beego Compress group `ie9` begin */</script>
+	<script type="text/javascript" src="/static_source/js/html5shiv.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/respond.min.js?ver=1409586500"></script>
+	<script>/* end */</script>
+<![endif]-->
+		
+	</head>
+	<body id="front">
+		<noscript>Please enable JavaScript in your browser!</noscript>
+		<div id="wrapper">
+			<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container" data-toggle="clingify">
+        <div class="row">
+            <div class="navbar-header">
+                
+                <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="hidden-xs logo" href="/">
+                    <img style="height:32px;width:102px;" src="/static/img/beego_purple.png">
+                </a>
+                <div class="visible-xs text-center">
+                    <a class="navbar-brand" href="/">
+                        Beego
+                    </a>
+                    
+                    <span class="nav-github">
+                        <span rel="show-github" data-user="astaxie" data-repo="beego"></span>
+                    </span>
+                    
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" role="navigation" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li ><a href="/">Home</a></li>
+                    <li class="active"><a href="/quickstart">Getting started</a></li>
+                    <li ><a href="/community">Community</a></li>
+                    <li ><a href="/docs/intro/">Documentation</a></li>
+                    <li ><a href="/video">Video</a></li>
+                    <li ><a href="/products">Products</a></li>
+                    <li ><a href="/blog">Blog</a></li>
+                </ul>
+                <div class="hidden-sm hidden-xs nav-lang pull-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-xs btn-default btn-md dropdown-toggle" data-toggle="dropdown">Language:English <i class="caret"></i></button>
+                        <ul class="dropdown-menu">
+                            
+                                <li><a href="javascript::" data-lang="zh-CN" class="lang-changed">简体中文</a></li>
+                            
+                                <li><a href="javascript::" data-lang="ru-RU" class="lang-changed">Russian</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden-sm hidden-xs nav-github pull-right">
+                    <span rel="show-github" data-user="astaxie" data-repo="beego"></span>
+                    <span rel="show-github" data-user="astaxie" data-repo="beego" data-type="fork"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+			<div id="main">
+				
+<div class="container main-container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box">
+				<div class="cell slim page-box markdown">
+					<div class="page-header">
+					    <h1>
+					    	Getting started
+					    	<a href="https://github.com/beego/beedoc/blob/master/en-US/quickstart.md" class="pull-right btn btn-info" target="_blank">Improve this page on GitHub</a>
+					    </h1>
+					</div>
+					<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <meta name="GENERATOR" content="Blackfriday Markdown Processor v1.1" />
+  <meta charset="utf-8" />
+</head>
+<body>
+
+<h2>Installation</h2>
+
+<p>Beego contains sample applications to help you learn and use the Beego app framework.</p>
+
+<p>You will need a <a href="https://golang.org">Go</a> 1.1+ installation for this to work.</p>
+
+<p>You will need to install or upgrade <a href="http://beego.me/docs/install/bee.md">Beego</a> and the <a href="http://beego.me/docs/install/bee.md">Bee</a> dev tool:</p>
+
+<pre><code>go get -u github.com/astaxie/beego
+go get -u github.com/beego/bee
+</code></pre>
+
+<p>For convenience, you should add <code>$GOPATH/bin</code> to your <code>$PATH</code> environment variable. Please make sure you have already set the <code>$GOPATH</code> environment variable.</p>
+
+<p>If you haven&rsquo;t set <code>$GOPATH</code> add it to the shell you&rsquo;re using (~/.profile, ~/.zshrc, ~/.cshrc or any other).</p>
+
+<p>For example <code>~/.zsh</code><br />
+<code>
+echo 'export GOPATH=&quot;$HOME/go&quot;' &gt;&gt; ~/.zsh
+</code></p>
+
+<p>If you have already set <code>$GOPATH</code><br />
+<code>
+echo 'export PATH=&quot;$GOPATH/bin:$PATH&quot;' &gt;&gt; ~/.profile # or ~/.zshrc, ~/.cshrc, whatever shell you use
+exec $SHELL
+</code></p>
+
+<p>Want to quickly see how it works? Then just set things up like this:<br />
+<code>
+cd $GOPATH/src
+bee new hello
+cd hello
+bee run
+</code></p>
+
+<p>Windows users：<br />
+<code>
+cd %GOPATH%/src
+bee new hello
+cd hello
+bee run
+</code></p>
+
+<p>These commands help you:</p>
+
+<ol>
+<li>Install Beego into your <code>$GOPATH</code>.<br /></li>
+<li>Install the Bee tool in your computer.<br /></li>
+<li>Create a new application called <code>hello</code>.<br /></li>
+<li>Start hot compile.<br /></li>
+</ol>
+
+<p>Once it&rsquo;s running, open a browser to <a href="http://localhost:8080/">http://localhost:8080/</a>.</p>
+
+<h2>Simple example</h2>
+
+<p>The following example prints <code>Hello world</code> to your browser, it shows how easy it is to build a web application with beego.<br />
+```go<br />
+package main</p>
+
+<p>import (</p>
+
+<pre><code>&quot;github.com/astaxie/beego&quot;
+</code></pre>
+
+<p>)</p>
+
+<p>type MainController struct {</p>
+
+<pre><code>beego.Controller
+</code></pre>
+
+<p>}</p>
+
+<p>func (this *MainController) Get() {</p>
+
+<pre><code>this.Ctx.WriteString(&quot;hello world&quot;)
+</code></pre>
+
+<p>}</p>
+
+<p>func main() {</p>
+
+<pre><code>beego.Router(&quot;/&quot;, &amp;MainController{})
+beego.Run()
+</code></pre>
+
+<p>}<br />
+```</p>
+
+<p>Save file as <code>hello.go</code>, build and run it:</p>
+
+<pre><code>$ go build -o hello hello.go
+$ ./hello
+</code></pre>
+
+<p>Open <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a> in your browser and you will see <code>hello world</code>.</p>
+
+<p>What is happening in the scenes of the above example?</p>
+
+<ol>
+<li>We import package <code>github.com/astaxie/beego</code>. As we know, Go initializes packages and runs init() in every package (<a href="https://github.com/Unknwon/build-web-application-with-golang_EN/blob/master/eBook/02.3.md#main-function-and-init-function">more details</a>), so Beego initializes the <code>BeeApp</code> application at this time.<br /></li>
+<li>Define the controller. We define a struct called <code>MainController</code> with an anonymous field <code>beego.Controller</code>, so the <code>MainController</code> has all methods that <code>beego.Controller</code> has.<br /></li>
+<li>Define some RESTful methods. Due to the anonymous field above, <code>MainController</code> already has <code>Get</code>, <code>Post</code>, <code>Delete</code>, <code>Put</code> and other methods, these methods will be called when user sends a corresponding request (e.g. the <code>Post</code> method is called to handle requests using POST. Therefore, after we overloaded the <code>Get</code> method in <code>MainController</code>, all GET requests will use that method in <code>MainController</code> instead of in <code>beego.Controller</code>.<br /></li>
+<li>Define the main function. All applications in Go use <code>main</code> as their entry point like C does.<br /></li>
+<li>Register routers. This tells Beego which controller is responsible for specific requests. Here we register <code>MainController</code> for <code>/</code>, so all requests to <code>/</code> will be handed by <code>MainController</code>. Be aware that the first argument is the path and the second one is pointer to the controller you want to register.<br /></li>
+<li>Run the application on port 8080 as default, press <code>Ctrl+c</code> to exit.<br /></li>
+</ol>
+
+<p>Following are shortcut <code>.bat</code> files for Windows users:</p>
+
+<p>Create files  <code>step1.install-bee.bat</code> and <code>step2.new-beego-app.bat</code> under <code>%GOPATH%/src</code>.</p>
+
+<p><code>step1.install-bee.bat</code>:</p>
+
+<pre><code>set GOPATH=%~dp0..
+go build github.com\beego\bee
+copy bee.exe %GOPATH%\bin\bee.exe
+del bee.exe
+pause
+</code></pre>
+
+<p><code>step2.new-beego-app.bat</code>:</p>
+
+<pre><code>@echo Set value of APP same as your app folder
+set APP=coscms.com
+set GOPATH=%~dp0..
+set BEE=%GOPATH%\bin\bee
+%BEE% new %APP%
+cd %APP%
+echo %BEE% run %APP%.exe &gt; run.bat
+echo pause &gt;&gt; run.bat
+start run.bat
+pause
+start http://127.0.0.1:8080
+</code></pre>
+
+<p>Click those two file in order will quick start your Beego tour. And just run <code>run.bat</code> in the future.</p>
+
+</body>
+</html>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		    </div>
+		    <div class="wrapper-push"></div>
+		</div>
+		<footer id="footer">
+    <div class="container">
+        <div class="row footer-wrap">
+            <div class="col-md-12 desc">
+                <div class="pull-right">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-default btn-md dropdown-toggle" data-toggle="dropdown">Language:English <i class="caret"></i></button>
+                        <ul class="dropdown-menu">
+                            
+                                <li><a href="javascript::" data-lang="zh-CN" class="lang-changed">简体中文</a></li>
+                            
+                                <li><a href="javascript::" data-lang="ru-RU" class="lang-changed">Russian</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    
+                        <a class="btn btn-success" href="/donate"><i class="icon-dollar"></i> Donate Us</a>
+                    
+                </div>
+                
+                <p>
+                    <a href="/about"><strong>About</strong></a>
+                    |
+                    <a href="/team"><strong>Team</strong></a>
+                    |
+                    <a target="_blank" href="https://github.com/astaxie/beego" target="_blank"><strong><i class="icon-github-sign"></i> Github</strong></a>
+                    - 22ms.
+                </p>
+
+                <p>
+                    Copyright © 2012-2014 Beego Under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">apache 2.0 licence</a>. Logo designed by <a target="_blank" href="http://mdong.org">Tengfei</a>.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39123845-1', 'beego.me');
+  ga('send', 'pageview');
+
+</script>
+
+<script>/* Beego Compress group `lib` begin */</script>
+	<script type="text/javascript" src="/static_source/js/jquery.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.extend.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/bootstrap.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/lib.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/prettify.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jStorage.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.jpanelmenu.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jRespond.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.clingify.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/imagesloaded.pkgd.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/masonry.pkgd.min.js?ver=1409586500"></script>
+	<script>/* end */</script>
+<script>/* Beego Compress group `app` begin */</script>
+	<script type="text/javascript" src="/static_source/js/main.js?ver=1409586500"></script>
+	<script>/* end */</script>
+	</body>
+</html>
+
+
+

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="slene, Unknown" />
+
+<title>Beego: Building Web API with Auto Generated API Document Support - beego: simple &amp; powerful Go app framework</title>
+
+<link rel="shortcut icon" href="/static/img/favicon.png" />
+
+
+<script>/* Beego Compress group `lib` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/bootstrap.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/bootstrap-theme.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/font-awesome.min.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/prettify.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/select2.css?ver=1409586500" />
+	<script>/* end */</script>
+<!--[if IE 7]>
+<script>/* Beego Compress group `ie7` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/font-awesome-ie7.min.css?ver=1409586500" />
+	<script>/* end */</script>
+<![endif]-->
+<script>/* Beego Compress group `app` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/base.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/markdown.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/main.css?ver=1409586500" />
+	<script>/* end */</script>
+
+<!--[if lt IE 9]>
+	<script>/* Beego Compress group `ie9` begin */</script>
+	<script type="text/javascript" src="/static_source/js/html5shiv.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/respond.min.js?ver=1409586500"></script>
+	<script>/* end */</script>
+<![endif]-->
+		
+	</head>
+	<body id="front">
+		<noscript>Please enable JavaScript in your browser!</noscript>
+		<div id="wrapper">
+			<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container" data-toggle="clingify">
+        <div class="row">
+            <div class="navbar-header">
+                
+                <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="hidden-xs logo" href="/">
+                    <img style="height:32px;width:102px;" src="/static/img/beego_purple.png">
+                </a>
+                <div class="visible-xs text-center">
+                    <a class="navbar-brand" href="/">
+                        Beego
+                    </a>
+                    
+                    <span class="nav-github">
+                        <span rel="show-github" data-user="astaxie" data-repo="beego"></span>
+                    </span>
+                    
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" role="navigation" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li ><a href="/">Home</a></li>
+                    <li ><a href="/quickstart">Getting started</a></li>
+                    <li ><a href="/community">Community</a></li>
+                    <li ><a href="/docs/intro/">Documentation</a></li>
+                    <li ><a href="/video">Video</a></li>
+                    <li ><a href="/products">Products</a></li>
+                    <li class="active"><a href="/blog">Blog</a></li>
+                </ul>
+                <div class="hidden-sm hidden-xs nav-lang pull-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-xs btn-default btn-md dropdown-toggle" data-toggle="dropdown">Language:English <i class="caret"></i></button>
+                        <ul class="dropdown-menu">
+                            
+                                <li><a href="javascript::" data-lang="zh-CN" class="lang-changed">简体中文</a></li>
+                            
+                                <li><a href="javascript::" data-lang="ru-RU" class="lang-changed">Russian</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden-sm hidden-xs nav-github pull-right">
+                    <span rel="show-github" data-user="astaxie" data-repo="beego"></span>
+                    <span rel="show-github" data-user="astaxie" data-repo="beego" data-type="fork"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+			<div id="main">
+				
+<div class="container main-container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box">
+				<div class="cell slim page-box markdown">
+					<div class="page-header">
+					    <h1>
+					    	Beego: Building Web API with Auto Generated API Document Support
+					    </h1>
+					</div>
+					<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <meta name="GENERATOR" content="Blackfriday Markdown Processor v1.1" />
+  <meta charset="utf-8" />
+</head>
+<body>
+
+<h2>Introduction</h2>
+
+<p>We released <a href="http://beego.me/docs/intro/releases.md#beego-1.3.0">Beego 1.3</a> last week with a very cool feature: Auto Generated API Document. This article will show you how to use this new feature.</p>
+
+<h2>Why do we need Auto Generated API Document?</h2>
+
+<p>Now we need to build a API for the mobile app. We designed the API structures and wrote the API document prototype based on the requirements. We shared the document with the mobile developers to let them know how to use and test our API. However while developing the API structures will keep changing and we need to keep the API document updated. It&rsquo;s a pain for us. Many times after changing the API we forgot to update the API Document, it&rsquo;s also a pain for the user of the API. Another thing is how can we make the API be easy tested. It will be very good to have a interface where the user can test the API together with the document as well.</p>
+
+<p>To walk through from this dilemma we found <a href="https://helloreverb.com/developers/swagger">Swagger</a>. You can see a <a href="http://petstore.swagger.wordnik.com">live demo</a> here.</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Swagger™ is a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful web services.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p>With the auto generated document by integrating Swagger into beego we can have these benifits.</p>
+
+<ol>
+<li>Standard declarative comments for API functions which makes<br /></li>
+<li>The API code becomes more maintainable with the comments<br /></li>
+<li>The Swagger style API document will be generated automacally based on the comments.<br /></li>
+</ol>
+
+<h2>Creating the Beego API aplication</h2>
+
+<pre><code>go get -u github.com/beego/bee
+go get -u github.com/astaxie/beego
+</code></pre>
+
+<p>Go to <code>GOPATH/src</code> directory and execute command <code>bee api bapi</code> to create the API application. Then go to the application directory <code>cd bapi</code> and run <code>bee run -downdoc=true -gendoc=true</code>.</p>
+
+<p>This displays output similar to the following:</p>
+
+<p><img src="https://raw.githubusercontent.com/beego/beeblog/master/en-US/images/bee_api.png" alt="" />
+</p>
+
+<p>Loading up <a href="http://127.0.0.1:8080/swagger/swagger-1/">http://127.0.0.1:8080/swagger/swagger-1/</a> in the browser shows the following output:</p>
+
+<p><img src="https://raw.githubusercontent.com/beego/beeblog/master/en-US/images/docs.png" alt="" />
+</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p>You can only use 127.0.0.1 here other than loalhost to prevent the Ajax CORS issue.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p>Bang! Our live testable API document is ready to use. Now let&rsquo;s look into the details of the project we just created.</p>
+
+<h2>Directory structure</h2>
+
+<p>You&rsquo;ll see the following directory structure created by <code>bee api</code></p>
+
+<pre><code>|-- bapi
+|-- conf
+|   `-- app.conf
+|-- controllers
+|   |-- object.go
+|   `-- user.go
+|-- docs
+|   |-- doc.go
+|   `-- docs.go
+|-- lastupdate.tmp
+|-- main.go
+|-- models
+|   |-- object.go
+|   `-- user.go
+|-- routers
+|   |-- commentsRouter.go
+|   `-- router.go
+|-- swagger
+`-- tests
+    `-- default_test.go
+</code></pre>
+
+<ul>
+<li><code>main.go</code> Our bootstrap file.<br /></li>
+<li><code>bapi</code> The compiled binary file.<br /></li>
+<li><code>conf</code> The directory for configuration file.<br /></li>
+<li><code>controllers</code> Our controllers<br /></li>
+<li><code>models</code> Our models<br /></li>
+<li><code>docs</code> Our auto generated document<br /></li>
+<li><code>lastupdate.tmp</code> Cache file for <code>Annotation Router</code><br /></li>
+<li><code>routers</code> Routers<br /></li>
+<li><code>swagger</code> A static directory for Swagger API related files.<br /></li>
+<li><code>test</code> The testcase for the application. You can run the testcases without run the application.<br /></li>
+</ul>
+
+<h2>The bootstrap main file</h2>
+
+<p>The following is the <code>main.go</code> file:</p>
+
+<pre><code>package main
+
+import (
+    _ &quot;bapi/docs&quot;
+    _ &quot;bapi/routers&quot;
+
+    &quot;github.com/astaxie/beego&quot;
+)
+
+func main() {
+    if beego.RunMode == &quot;dev&quot; {
+        beego.DirectoryIndex = true
+        beego.StaticDir[&quot;/swagger&quot;] = &quot;swagger&quot;
+    }
+    beego.Run()
+}
+</code></pre>
+
+<p>This is just a normal Beego bootstrap file with several lines of code to add <code>swagger</code> to static directory.</p>
+
+<p>Next let&rsquo;s see the router structure of our API application.</p>
+
+<h2>Namespace Router</h2>
+
+<p>The router is using the <code>namespace</code> router. Two points two notice:</p>
+
+<ol>
+<li>The API with auto generated document only support namespace router now.<br /></li>
+<li>It only support <code>NSNamespace</code> and <code>NSInclude</code> within two levels.<br /></li>
+</ol>
+
+<p>The following is our routers:</p>
+
+<pre><code>func init() {
+    ns := beego.NewNamespace(&quot;/v1&quot;,
+        beego.NSNamespace(&quot;/object&quot;,
+            beego.NSInclude(
+                &amp;controllers.ObjectController{},
+            ),
+        ),
+        beego.NSNamespace(&quot;/user&quot;,
+            beego.NSInclude(
+                &amp;controllers.UserController{},
+            ),
+        ),
+    )
+    beego.AddNamespace(ns)
+}
+</code></pre>
+
+<p>It created a <code>ns</code> variable with <code>beego.NewNamespace</code>. Actually <code>ns</code> variable is keeping a rouer tree and we can add this tree under any other router tree. This is a benifit of <code>namespace</code> that you can design the <code>namespace</code> in your module and add it to other modules with any prefix.</p>
+
+<p>Let&rsquo;s take a look at <code>NewNamespace</code> function. Here is the definition:</p>
+
+<pre><code>NewNamespace(prefix string, params ...innnerNamespace) *Namespace
+</code></pre>
+
+<p>the first parameter is the url prefix, the second parameter is the variable argument list with type <code>innnerNamespace</code>.</p>
+
+<p>The following is the definition of <code>innnerNamespace</code>:</p>
+
+<pre><code>type innnerNamespace func(*Namespace)
+</code></pre>
+
+<p>It&rsquo;s a function that accept parameter <code>*Namespace</code>. In beego all the functions list below support return this function type <code>innnerNamespace</code>:</p>
+
+<ul>
+<li>NSCond(cond namespaceCond) innnerNamespace<br /></li>
+<li>NSBefore(filiterList &hellip;FilterFunc) innnerNamespace<br /></li>
+<li>NSAfter(filiterList &hellip;FilterFunc) innnerNamespace<br /></li>
+<li>NSInclude(cList …ControllerInterface) innnerNamespace<br /></li>
+<li>NSRouter(rootpath string, c ControllerInterface, mappingMethods …string) innnerNamespace<br /></li>
+<li>NSGet(rootpath string, f FilterFunc) innnerNamespace<br /></li>
+<li>NSPost(rootpath string, f FilterFunc) innnerNamespace<br /></li>
+<li>NSDelete(rootpath string, f FilterFunc) innnerNamespace<br /></li>
+<li>NSPut(rootpath string, f FilterFunc) innnerNamespace<br /></li>
+<li>NSHead(rootpath string, f FilterFunc) innnerNamespace<br /></li>
+<li>NSOptions(rootpath string, f FilterFunc) innnerNamespace<br /></li>
+<li>NSPatch(rootpath string, f FilterFunc) innnerNamespace<br /></li>
+<li>NSAny(rootpath string, f FilterFunc) innnerNamespace<br /></li>
+<li>NSHandler(rootpath string, h http.Handler) innnerNamespace<br /></li>
+<li>NSAutoRouter(c ControllerInterface) innnerNamespace<br /></li>
+<li>NSAutoPrefix(prefix string, c ControllerInterface) innnerNamespace<br /></li>
+<li>NSNamespace(prefix string, params …innnerNamespace) innnerNamespace<br /></li>
+</ul>
+
+<p>So we can use any function list above for the parameter list of <code>NewNamespace</code>.</p>
+
+<p>Now let&rsquo;s take a look at our namespace router <code>ns</code>. It&rsquo;s a multi-level nested function. The first parameter is <code>/v1</code> which is the prefix of the router tree. The second and the third parameters are <code>beego.NSNamespace</code>. In the second level of <code>beego.NSNamespace</code>, we use <code>beego.NSInclude</code> to inject the <code>Annotation Router</code>. <code>beego.NSInclude</code> is designed for <code>Annotation Router</code>, we don&rsquo;t have any router settings here but only set up the controller. So how will this work? Let&rsquo;s go deeper into the <code>Annotation Router</code>.</p>
+
+<h2>Annotation Router</h2>
+
+<p><code>Annotation Router</code> are some comments set for Controller that Beego will parse them into the real routers automatically. Let&rsquo;s see what do we do to for it in <code>ObjectController</code> and <code>UserController</code>:</p>
+
+<pre><code>// Operations about object
+type ObjectController struct {
+    beego.Controller
+}
+
+// @Title create
+// @Description create object
+// @Param   body        body    models.Object   true        &quot;The object content&quot;
+// @Success 200 {string} models.Object.Id
+// @Failure 403 body is empty
+// @router / [post]
+func (this *ObjectController) Post() {
+    var ob models.Object
+    json.Unmarshal(this.Ctx.Input.RequestBody, &amp;ob)
+    objectid := models.AddOne(ob)
+    this.Data[&quot;json&quot;] = map[string]string{&quot;ObjectId&quot;: objectid}
+    this.ServeJson()
+}
+</code></pre>
+
+<p>We can see there are bunch of comments above the functions. The last line is for the <code>Annotation Router</code> such as <code>//@router / [post]</code> which means routing <code>post</code> method for <code>/</code> to this function.</p>
+
+<p>It has the exactlly same functionality as the router we were using befoer <code>beego.Router(&quot;/&quot;, &amp;ObjectController{},&quot;post:Post&quot;)</code> but in this case Beego will help you to register the router. But how does Beego do that? While the application starting, if the application is using <code>NSInclude</code> and the RunMode is <code>dev</code>, Beego will check if the router is already generated and if there is update, if true, Beego will use <code>AST</code> in Go to analyze the application&rsquo;s source code of the <code>controller</code> that <code>NSInclude</code> called and generate the routers and write to file <code>routers/commentsRouter.go</code>.</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p>The router analysis will only happens in <code>dev</code> mode. So if you updated your code related to <code>Annotation Router</code>, you need to run <code>dev</code> mode at least once to generate the routers.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p><code>Annotation Router</code> starts with <code>// @router</code> and accept two parameters: 1. The router URI 2. The supported methods. It need to be put above the router function. The order of the comments doesn&rsquo;t matter.</p>
+
+<p>The first parameter router URI supports all the URI rules. Such as <code>/object/:key</code>, <code>/object</code> and <code>/cms_:id([0-9]+).html</code>.</p>
+
+<p>The second parameter supported methods. Multiple methods separated by <code>,</code> such as <code>[post,get]</code>. But the auto generated API document only supports one method which means if there are multiple methods in the list, the auto generated API document will only take the first method. We don&rsquo;t recommend you to set multiple methods for one function.</p>
+
+<p>By having these basic understanding of <code>Annotation Router</code> let&rsquo;s start the main topic today: Auto Generated API Document.</p>
+
+<h2>Auto Generated API Document</h2>
+
+<p>Auto Generated API Document is the elegant swagger document generated by Beego based on the annotation comments automatically. The benifit of this approach is you only write the comments for the functions once and you get the live testable API document. They will always keep synchronized. It makes the source code maintainable as well as makes the API document testable. Two birds in one shot.</p>
+
+<p>So how can we generate the API Document?</p>
+
+<p>Here is how can we implement this approach:</p>
+
+<ol>
+<li>Swagger&rsquo;s <a href="https://github.com/wordnik/swagger-spec/tree/master/schemas/v1.2">schema</a> is a bunch of JSON data.<br /></li>
+<li>We write some annotations for the router functions.<br /></li>
+<li>Beego generate Swagger&rsquo;s schema based on the annotations.<br /></li>
+</ol>
+
+<p>The first step is describing the API:</p>
+
+<h3>API Document</h3>
+
+<p>We mentioned it before in <code>router.go</code> there are bunch of annotaions. It&rsquo;s the description of this API application:</p>
+
+<pre><code>// @APIVersion 1.0.0
+// @Title beego Test API
+// @Description beego has a very cool tools to autogenerate documents for your API
+// @Contact astaxie@gmail.com
+// @TermsOfServiceUrl http://beego.me/
+// @License Apache 2.0
+// @LicenseUrl http://www.apache.org/licenses/LICENSE-2.0.html
+</code></pre>
+
+<p>Following are the flags we can use:</p>
+
+<ul>
+<li>@APIVersion<br /></li>
+<li>@Title<br /></li>
+<li>@Description<br /></li>
+<li>@Contact<br /></li>
+<li>@TermsOfServiceUrl<br /></li>
+<li>@License<br /></li>
+<li>@LicenseUrl<br /></li>
+</ul>
+
+<p>All of them are optional followed by a string. The following is the doc we generated: <a href="http://127.0.0.1:8080/docs:">http://127.0.0.1:8080/docs:</a></p>
+
+<pre><code>{
+  &quot;apiVersion&quot;: &quot;1.0.0&quot;,
+  &quot;swaggerVersion&quot;: &quot;1.2&quot;,
+  &quot;apis&quot;: [
+    {
+      &quot;path&quot;: &quot;/object&quot;,
+      &quot;description&quot;: &quot;Operations about object\n&quot;
+    },
+    {
+      &quot;path&quot;: &quot;/user&quot;,
+      &quot;description&quot;: &quot;Operations about Users\n&quot;
+    }
+  ],
+  &quot;info&quot;: {
+    &quot;title&quot;: &quot;beego Test API&quot;,
+    &quot;description&quot;: &quot;beego has a very cool tools to autogenerate documents for your API&quot;,
+    &quot;contact&quot;: &quot;astaxie@gmail.com&quot;,
+    &quot;termsOfServiceUrl&quot;: &quot;http://beego.me/&quot;,
+    &quot;license&quot;: &quot;Url http://www.apache.org/licenses/LICENSE-2.0.html&quot;
+  }
+}
+</code></pre>
+
+<p>This is the information fetched by the first request. How do we generate the <code>apis</code> object? Beego fetched it from your namespace source code. Right now it only supports two and only two level nested namespace. The first level is the baseUrl. The path comes from the second level namespace&rsquo;s prefix. So where does the description come from?</p>
+
+<h3>Annotation for Controller</h3>
+
+<p>We add the annotation for controller and it&rsquo;s methods to describe the controller.</p>
+
+<pre><code>// Operations about object
+type ObjectController struct {
+    beego.Controller
+}
+</code></pre>
+
+<p>The comment above describes the controller. The comment following for the methods will describe the router, parameters and the return value.</p>
+
+<pre><code>// @Title Get
+// @Description find object by objectid
+// @Param   objectId        path    string  true        &quot;the objectid you want to get&quot;
+// @Success 200 {object} models.Object
+// @Failure 403 :objectId is empty
+// @router /:objectId [get]
+func (this *ObjectController) Get() {
+}
+</code></pre>
+
+<p>Let&rsquo;s take a look at these annotations:</p>
+
+<ul>
+<li><p>@Title</p>
+
+<p>Title of the interface. Unique and optional.</p>
+
+<p>Format: followed by a string</p></li>
+
+<li><p>@Description</p>
+
+<p>Description of the interface. Unique and optional.</p>
+
+<p>Format: followed by a string</p></li>
+
+<li><p>@Param</p>
+
+<p>The request parameters for the interface. Multiple and optional.</p>
+
+<p>Format: <code>parameter name</code> <code>parameter sending type</code> <code>parameter data type</code> <code>required</code> <code>description comment</code></p>
+
+<p><code>parameter name</code> is a string</p>
+
+<p><code>parameter sending type</code> can be any one of the following values:</p>
+
+<ul>
+<li><code>query</code> means the parameter in url send by GET. such as ?aa=bb&amp;cc=dd<br /></li>
+<li><code>form</code> means the parameter send by POST.<br /></li>
+<li><code>path</code> means the parameter in the url path, such as for <code>/user/{uid}</code> uid is a parameter with <code>path</code> type.<br /></li>
+<li><code>body</code> means the raw data send from request body.<br /></li>
+<li><code>header</code> means the parameter in request header<br /></li>
+</ul>
+
+<p><code>parameter data type</code> can be any one of the following values:</p>
+
+<ul>
+<li><code>string</code><br /></li>
+<li><code>int</code><br /></li>
+<li><code>int64</code><br /></li>
+<li><code>object path</code> The object path is related to the project path. For example <code>models.Object</code> means <code>Object</code> object under <code>models</code> directory.<br /></li>
+</ul>
+
+<p><code>description comment</code> is a string</p>
+
+<p><code>required</code> is true or false</p></li>
+
+<li><p>@Success</p>
+
+<p>The success message returned to client.</p>
+
+<p>Format: <code>status code</code> <code>return type</code> <code>return message or return object path</code></p>
+
+<ul>
+<li><code>status code</code> is the standard HTTP status code, 200 201 etc<br /></li>
+<li><code>return type</code> {object} is the object and will get the object by <code>return object path</code>. Other value will return <code>return message</code>.<br /></li>
+<li><code>return object path</code> The object path is the relative path to the project path. For example <code>models.Object</code> means <code>Object</code> object under <code>models</code> directory.<br /></li>
+</ul></li>
+
+<li><p>@Failure</p>
+
+<p>The failure message returned to client.</p>
+
+<p>Format: <code>status code</code> <code>error message</code></p></li>
+
+<li><p>@router</p>
+
+<p>The Annotation Router we discussed before.</p></li>
+</ul>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Every format above, parameters can be separated by on or more <code>'\t', '\n', '\v', '\f', '\r', ' ', U+0085 (NEL), U+00A0 (NBSP)</code></p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p>Following code is the JSON data we generated from these annotations.</p>
+
+<pre><code>{
+  &quot;path&quot;: &quot;/object/{objectId}&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;operations&quot;: [
+    {
+      &quot;httpMethod&quot;: &quot;GET&quot;,
+      &quot;nickname&quot;: &quot;Get&quot;,
+      &quot;type&quot;: &quot;&quot;,
+      &quot;summary&quot;: &quot;find object by objectid&quot;,
+      &quot;parameters&quot;: [
+        {
+          &quot;paramType&quot;: &quot;path&quot;,
+          &quot;name&quot;: &quot;objectId&quot;,
+          &quot;description&quot;: &quot;\&quot;the objectid you want to get\&quot;&quot;,
+          &quot;dataType&quot;: &quot;string&quot;,
+          &quot;type&quot;: &quot;&quot;,
+          &quot;format&quot;: &quot;&quot;,
+          &quot;allowMultiple&quot;: false,
+          &quot;required&quot;: true,
+          &quot;minimum&quot;: 0,
+          &quot;maximum&quot;: 0
+        }
+      ],
+      &quot;responseMessages&quot;: [
+        {
+          &quot;code&quot;: 200,
+          &quot;message&quot;: &quot;models.Object&quot;,
+          &quot;responseModel&quot;: &quot;Object&quot;
+        },
+        {
+          &quot;code&quot;: 403,
+          &quot;message&quot;: &quot;:objectId is empty&quot;,
+          &quot;responseModel&quot;: &quot;&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+
+<h3>Customized Object Annotation</h3>
+
+<p>Following is the definition of our object:</p>
+
+<pre><code>type Object struct {
+    ObjectId   string
+    Score      int64
+    PlayerName string
+}
+</code></pre>
+
+<p>The auto generated object description for document is:</p>
+
+<pre><code>Object {
+ObjectId (string, optional): ,
+PlayerName (string, optional): ,
+Score (int64, optional):
+}
+</code></pre>
+
+<p>We can see all the fields are <code>optional</code>, we can change it by adding <code>tag</code> as showing below:</p>
+
+<pre><code>type Object struct {
+    ObjectId   string   `required:&quot;true&quot; description:&quot;object id&quot;`
+    Score      int64        `required:&quot;true&quot; description:&quot;players's scores&quot;`
+    PlayerName string   `required:&quot;true&quot; description:&quot;plaers name, used in system&quot;`
+}
+</code></pre>
+
+<p>To change the returned fields name, you can add <code>tag</code> with name json or thrife as showing below:</p>
+
+<pre><code>type Object struct {
+    ObjectId   string   `json:&quot;object_id&quot;`
+    Score      int64        `json:&quot;player_score&quot;`
+    PlayerName string   `json:&quot;player_name&quot;`
+}
+</code></pre>
+
+<p>The auto generated object description for document is:<br />
+<code>
+Object {
+object_id (string, optional): ,
+player_score (string, optional): ,
+player_name (int64, optional):
+}
+</code></p>
+
+<h2>FAQ</h2>
+
+<ol>
+<li>Q: bee doesn&rsquo;t have the command we ran befoer.<br /></li>
+</ol>
+
+<p>A: Please upgrade bee to latest version.</p>
+
+<ol>
+<li>Q: The document is generated, but I can&rsquo;t test the API.<br /></li>
+</ol>
+
+<p>A: It might because of the CORS issue. please make sure the url and port you request is same as the application.</p>
+
+<ol>
+<li>Q: Some other exceptions.<br /></li>
+</ol>
+
+<p>A: Please report the issue to us. We will try to fix it ASAP.</p>
+
+</body>
+</html>
+
+				</div>
+			</div>
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+     
+    var disqus_shortname = 'beego'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		</div>
+	</div>
+</div>
+
+		    </div>
+		    <div class="wrapper-push"></div>
+		</div>
+		<footer id="footer">
+    <div class="container">
+        <div class="row footer-wrap">
+            <div class="col-md-12 desc">
+                <div class="pull-right">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-default btn-md dropdown-toggle" data-toggle="dropdown">Language:English <i class="caret"></i></button>
+                        <ul class="dropdown-menu">
+                            
+                                <li><a href="javascript::" data-lang="zh-CN" class="lang-changed">简体中文</a></li>
+                            
+                                <li><a href="javascript::" data-lang="ru-RU" class="lang-changed">Russian</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    
+                        <a class="btn btn-success" href="/donate"><i class="icon-dollar"></i> Donate Us</a>
+                    
+                </div>
+                
+                <p>
+                    <a href="/about"><strong>About</strong></a>
+                    |
+                    <a href="/team"><strong>Team</strong></a>
+                    |
+                    <a target="_blank" href="https://github.com/astaxie/beego" target="_blank"><strong><i class="icon-github-sign"></i> Github</strong></a>
+                    - 19ms.
+                </p>
+
+                <p>
+                    Copyright © 2012-2014 Beego Under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">apache 2.0 licence</a>. Logo designed by <a target="_blank" href="http://mdong.org">Tengfei</a>.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39123845-1', 'beego.me');
+  ga('send', 'pageview');
+
+</script>
+
+<script>/* Beego Compress group `lib` begin */</script>
+	<script type="text/javascript" src="/static_source/js/jquery.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.extend.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/bootstrap.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/lib.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/prettify.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jStorage.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.jpanelmenu.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jRespond.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.clingify.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/imagesloaded.pkgd.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/masonry.pkgd.min.js?ver=1409586500"></script>
+	<script>/* end */</script>
+<script>/* Beego Compress group `app` begin */</script>
+	<script type="text/javascript" src="/static_source/js/main.js?ver=1409586500"></script>
+	<script>/* end */</script>
+	</body>
+</html>
+
+

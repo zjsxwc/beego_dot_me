@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="slene, Unknown" />
+
+<title>Donate to Beego - beego: simple &amp; powerful Go app framework</title>
+
+<link rel="shortcut icon" href="/static/img/favicon.png" />
+
+
+<script>/* Beego Compress group `lib` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/bootstrap.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/bootstrap-theme.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/font-awesome.min.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/prettify.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/select2.css?ver=1409586500" />
+	<script>/* end */</script>
+<!--[if IE 7]>
+<script>/* Beego Compress group `ie7` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/font-awesome-ie7.min.css?ver=1409586500" />
+	<script>/* end */</script>
+<![endif]-->
+<script>/* Beego Compress group `app` begin */</script>
+	<link rel="stylesheet" href="/static_source/css/base.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/markdown.css?ver=1409586500" />
+	<link rel="stylesheet" href="/static_source/css/main.css?ver=1409586500" />
+	<script>/* end */</script>
+
+<!--[if lt IE 9]>
+	<script>/* Beego Compress group `ie9` begin */</script>
+	<script type="text/javascript" src="/static_source/js/html5shiv.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/respond.min.js?ver=1409586500"></script>
+	<script>/* end */</script>
+<![endif]-->
+		
+	</head>
+	<body id="front">
+		<noscript>Please enable JavaScript in your browser!</noscript>
+		<div id="wrapper">
+			<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container" data-toggle="clingify">
+        <div class="row">
+            <div class="navbar-header">
+                
+                <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="hidden-xs logo" href="/">
+                    <img style="height:32px;width:102px;" src="/static/img/beego_purple.png">
+                </a>
+                <div class="visible-xs text-center">
+                    <a class="navbar-brand" href="/">
+                        Beego
+                    </a>
+                    
+                    <span class="nav-github">
+                        <span rel="show-github" data-user="astaxie" data-repo="beego"></span>
+                    </span>
+                    
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" role="navigation" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li ><a href="/">Home</a></li>
+                    <li ><a href="/quickstart">Getting started</a></li>
+                    <li ><a href="/community">Community</a></li>
+                    <li ><a href="/docs/intro/">Documentation</a></li>
+                    <li ><a href="/video">Video</a></li>
+                    <li ><a href="/products">Products</a></li>
+                    <li ><a href="/blog">Blog</a></li>
+                </ul>
+                <div class="hidden-sm hidden-xs nav-lang pull-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-xs btn-default btn-md dropdown-toggle" data-toggle="dropdown">Language:English <i class="caret"></i></button>
+                        <ul class="dropdown-menu">
+                            
+                                <li><a href="javascript::" data-lang="zh-CN" class="lang-changed">简体中文</a></li>
+                            
+                                <li><a href="javascript::" data-lang="ru-RU" class="lang-changed">Russian</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden-sm hidden-xs nav-github pull-right">
+                    <span rel="show-github" data-user="astaxie" data-repo="beego"></span>
+                    <span rel="show-github" data-user="astaxie" data-repo="beego" data-type="fork"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+			<div id="main">
+				
+<div class="container main-container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box">
+				<div class="cell slim page-box markdown">
+					<div class="page-header">
+	   				<h1>Donate to Beego</h1>
+					</div>
+					<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <meta name="GENERATOR" content="Blackfriday Markdown Processor v1.1" />
+  <meta charset="utf-8" />
+</head>
+<body>
+
+<h4>
+    <b><font color="red">
+    <p>Beego framework dedicates to providing a fast way to develop web applications and advocating for Go language. Your supports are highly appreciated and it means a lot to us.</p>
+    <p>Our Beego core team has been working a lot and improving Beego for more than a year. We dedicated a lot to provide everyone a better framework. If you feel Beego is helpful for you and want to kindly support it, we appreciate that. ^_^</p>
+    </font></b>
+</h4>
+
+<h4>
+    <b>Donate by Paypal:</b>
+    <p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="MR3MV8ZX9BWJ2">
+<table>
+<tr><td><input type="hidden" name="on0" value="support Beego">support Beego</td></tr><tr><td><select name="os0">
+    <option value="Option 1">Option 1 $10.00 USD</option>
+    <option value="Option 2">Option 2 $20.00 USD</option>
+    <option value="Option 3">Option 3 $50.00 USD</option>
+    <option value="Option 4">Option 4 $100.00 USD</option>
+    <option value="Option 5">Option 5 $200.00 USD</option>
+    <option value="Option 6">Option 6 $500.00 USD</option>
+    <option value="Option 7">Option 7 $1,000.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.paypalobjects.com/en_US/C2/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+    </p>
+</h4>
+
+<h3>Your donation will be used as:</h3>
+
+<ul>
+<li>Supports the development of Beego<br /></li>
+<li>Supports maintaining the communities<br /></li>
+<li>Upgrade to better server<br /></li>
+<li>Award the outstanding contributors<br /></li>
+<li>Holds community activities and lectures<br /></li>
+</ul>
+
+<h3>Donation Lists (descending by donating time)</h3>
+
+<table>
+<thead>
+<tr>
+<td>Donated at</td>
+<td align="center">Donator</td>
+<td align="right">Amount</td>
+<td>Comments</td>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>2014-Jan-24</td>
+<td align="center">Bernard Lim</td>
+<td align="right">$20.00</td>
+<td></td>
+</tr>
+
+<tr>
+<td>2013-Dec-23</td>
+<td align="center">William Kennedy</td>
+<td align="right">$100.00</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		    </div>
+		    <div class="wrapper-push"></div>
+		</div>
+		<footer id="footer">
+    <div class="container">
+        <div class="row footer-wrap">
+            <div class="col-md-12 desc">
+                <div class="pull-right">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-default btn-md dropdown-toggle" data-toggle="dropdown">Language:English <i class="caret"></i></button>
+                        <ul class="dropdown-menu">
+                            
+                                <li><a href="javascript::" data-lang="zh-CN" class="lang-changed">简体中文</a></li>
+                            
+                                <li><a href="javascript::" data-lang="ru-RU" class="lang-changed">Russian</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    
+                        <a class="btn btn-success" href="/donate"><i class="icon-dollar"></i> Donate Us</a>
+                    
+                </div>
+                
+                <p>
+                    <a href="/about"><strong>About</strong></a>
+                    |
+                    <a href="/team"><strong>Team</strong></a>
+                    |
+                    <a target="_blank" href="https://github.com/astaxie/beego" target="_blank"><strong><i class="icon-github-sign"></i> Github</strong></a>
+                    - 19ms.
+                </p>
+
+                <p>
+                    Copyright © 2012-2014 Beego Under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">apache 2.0 licence</a>. Logo designed by <a target="_blank" href="http://mdong.org">Tengfei</a>.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39123845-1', 'beego.me');
+  ga('send', 'pageview');
+
+</script>
+
+<script>/* Beego Compress group `lib` begin */</script>
+	<script type="text/javascript" src="/static_source/js/jquery.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.extend.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/bootstrap.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/lib.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/prettify.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jStorage.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.jpanelmenu.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jRespond.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/jquery.clingify.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/imagesloaded.pkgd.min.js?ver=1409586500"></script>
+	<script type="text/javascript" src="/static_source/js/masonry.pkgd.min.js?ver=1409586500"></script>
+	<script>/* end */</script>
+<script>/* Beego Compress group `app` begin */</script>
+	<script type="text/javascript" src="/static_source/js/main.js?ver=1409586500"></script>
+	<script>/* end */</script>
+	</body>
+</html>
+
+
